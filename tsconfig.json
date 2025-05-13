@@ -8,6 +8,9 @@
     "module": "nodenext",
     "target": "es2022",
     "outDir": "./dist",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
 
     "strict": true,
     "esModuleInterop": true,
