@@ -1,4 +1,5 @@
 import { AppError } from '../../utils/appError.ts'
+import ERRORS from '../../utils/errors.ts'
 import { ProducerInterval } from '../../utils/types.ts'
 import { AwardsRepository } from './repository.ts'
 
@@ -6,7 +7,7 @@ export class AwardsServices {
   static async getIntervals() {
     const movies = await AwardsRepository.getMovies()
     if (!movies || movies.length === 0) {
-      throw new AppError('Nenhum filme encontrado')
+      throw new AppError(ERRORS.MOVIES_NOT_FOUND)
     }
 
     // producers awards

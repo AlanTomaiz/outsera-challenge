@@ -2,20 +2,19 @@
   "name": "challenge",
   "version": "1.0.0",
   "description": "Teste técnico para a posição de backend",
-  "main": "dist/server.js",
+  "main": "dist/app.js",
   "type": "module",
   "author": "Alanderson Tomaiz",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start:dev": "tsx watch src/server.ts"
+    "start:dev": "tsx watch src/app.ts"
   },
   "dependencies": {
     "csv-parser": "^3.2.0",
     "dotenv": "^16.5.0",
     "express": "^4.21.2",
-    "express-async-errors": "^3.1.1",
-    "multer": "^1.4.5-lts.2"
+    "express-async-errors": "^3.1.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",

@@ -11,7 +11,6 @@ export class ErrorHandler {
       return
     }
 
-    console.log(error.message)
-    res.status(500).send({ status: 'error', message: 'Internal server error' })
+    res.status(500).json({ status: 'error', message: 'Internal server error' })
   }
 }
