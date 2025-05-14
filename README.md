@@ -49,7 +49,7 @@ npm install
 
 3. **Inicie a Aplicação**:
 ```bash
-npm start:dev
+npm run start:dev
 ```
 A aplicação estará disponível no endereço `http://localhost:3333`.
 
