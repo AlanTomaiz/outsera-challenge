@@ -2,8 +2,8 @@ import 'dotenv/config'
 import express from 'express'
 import 'express-async-errors'
 
-import { ErrorHandler } from './middleware/errorHandler'
-import { AwardsModels } from './models/awards'
+import { ErrorHandler } from './middleware/errorHandler.ts'
+import { AwardsModels } from './models/awards/index.ts'
 
 const server = express()
 server.use(express.json())
@@ -11,6 +11,4 @@ server.use(express.json())
 AwardsModels.register(server)
 server.use(ErrorHandler.register)
 
-server.listen(process.env.PORT!, () =>
-  console.log(`Server is running on port ${process.env.PORT}`)
-)
+export default server
